@@ -1,4 +1,4 @@
-import connect from "../config/connectDB";
+import connect from "../config/connectDB.js";
 const db = await connect();
 
 export class CounterModel {

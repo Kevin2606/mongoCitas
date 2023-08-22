@@ -155,6 +155,7 @@ db.createCollection("consultorios", {
 
 db.usuarios.insertMany([
     {
+        usu_id: 1,
         usu_nombre: "Juan",
         usu_segdo_nombre: "Pablo",
         usu_primer_apellido: "Gomez",
@@ -166,6 +167,7 @@ db.usuarios.insertMany([
         usu_genero: 1,
     },
     {
+        usu_id: 2,
         usu_nombre: "Maria",
         usu_segdo_nombre: "",
         usu_primer_apellido: "Lopez",
@@ -177,6 +179,7 @@ db.usuarios.insertMany([
         usu_genero: 2,
     },
     {
+        usu_id: 3,
         usu_nombre: "Carlos",
         usu_segdo_nombre: "Alberto",
         usu_primer_apellido: "Vargas",
@@ -188,6 +191,7 @@ db.usuarios.insertMany([
         usu_genero: 1,
     },
     {
+        usu_id: 4,
         usu_nombre: "Ana",
         usu_segdo_nombre: "Lucia",
         usu_primer_apellido: "Perez",
@@ -199,6 +203,7 @@ db.usuarios.insertMany([
         usu_genero: 2,
     },
     {
+        usu_id: 5,
         usu_nombre: "Luis",
         usu_segdo_nombre: "Fernando",
         usu_primer_apellido: "Torres",
@@ -246,30 +251,35 @@ db.medicos.insertMany([
 
 db.citas.insertMany([
     {
+        cit_id: 1,
         cit_fecha: new Date("2023-08-25"),
         cit_estadoCita: 1,
         cit_medico: 12345,
         cit_datosUsuario: 1,
     },
     {
+        cit_id: 2,
         cit_fecha: new Date("2023-09-05"),
         cit_estadoCita: 2,
         cit_medico: 54321,
         cit_datosUsuario: 2,
     },
     {
+        cit_id: 3,
         cit_fecha: new Date("2023-09-10"),
         cit_estadoCita: 1,
         cit_medico: 98765,
         cit_datosUsuario: 3,
     },
     {
+        cit_id: 4,
         cit_fecha: new Date("2023-09-15"),
         cit_estadoCita: 3,
         cit_medico: 67890,
         cit_datosUsuario: 4,
     },
     {
+        cit_id: 5,
         cit_fecha: new Date("2023-09-20"),
         cit_estadoCita: 2,
         cit_medico: 45678,
