@@ -5,9 +5,7 @@ const router = Router();
 
 router
 //Obtener todas las citas alfabéticamente
-.get("/", (req, res) => {
-    res.send("Obtener todas las citas alfabéticamente");
-})
+.get("/", CitaController.getAll)
 //Encontrar la próxima cita para un paciente específico (por ejemplo, el paciente con **usu_id 1**):
 .get("/paciente/:id", (req, res) => {
     res.send("Encontrar la próxima cita para un paciente específico (por ejemplo, el paciente con **usu_id 1**):");
