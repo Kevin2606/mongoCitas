@@ -103,6 +103,10 @@ db.createCollection("citas", {
                 "cit_datosUsuario",
             ],
             properties: {
+                cit_id: {
+                    bsonType: "int",
+                    description: "Identificador de la cita",
+                },
                 cit_fecha: {
                     bsonType: "date",
                     description: "Fecha de la cita",
@@ -130,6 +134,10 @@ db.createCollection("especialidades", {
             bsonType: "object",
             required: ["esp_nombre"],
             properties: {
+                esp_id: {
+                    bsonType: "int",
+                    description: "Identificador de la especialidad",
+                },
                 esp_nombre: {
                     bsonType: "string",
                     description: "Nombre de la especialidad",
@@ -144,6 +152,10 @@ db.createCollection("consultorios", {
             bsonType: "object",
             required: ["cons_nombre"],
             properties: {
+                cons_id: {
+                    bsonType: "int",
+                    description: "Identificador del consultorio",
+                },
                 cons_nombre: {
                     bsonType: "string",
                     description: "Nombre del consultorio",
@@ -288,17 +300,17 @@ db.citas.insertMany([
 ]);
 
 db.especialidades.insertMany([
-    { esp_nombre: "Cardiología" },
-    { esp_nombre: "Dermatología" },
-    { esp_nombre: "Pediatría" },
-    { esp_nombre: "Oftalmología" },
-    { esp_nombre: "Ginecología" },
+    { esp_nombre: "Cardiología", esp_id: 1 },
+    { esp_nombre: "Dermatología", esp_id: 2 },
+    { esp_nombre: "Pediatría", esp_id: 3 },
+    { esp_nombre: "Oftalmología", esp_id: 4 },
+    { esp_nombre: "Ginecología", esp_id: 5 },
 ]);
 
 db.consultorios.insertMany([
-    { cons_nombre: "Consultorio A" },
-    { cons_nombre: "Consultorio B" },
-    { cons_nombre: "Consultorio C" },
-    { cons_nombre: "Consultorio D" },
-    { cons_nombre: "Consultorio E" },
+    { cons_nombre: "Consultorio A", cons_id: 101 },
+    { cons_nombre: "Consultorio B", cons_id: 202 },
+    { cons_nombre: "Consultorio C", cons_id: 303 },
+    { cons_nombre: "Consultorio D", cons_id: 404 },
+    { cons_nombre: "Consultorio E", cons_id: 505 },
 ]);
