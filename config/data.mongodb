@@ -15,6 +15,10 @@ db.createCollection("usuarios", {
                 "usu_genero",
             ],
             properties: {
+                usu_id: {
+                    bsonType: "int",
+                    description: "Identificador del usuario",
+                },
                 usu_nombre: {
                     bsonType: "string",
                     description: "Nombre del usuario",
