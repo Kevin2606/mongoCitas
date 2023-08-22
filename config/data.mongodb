@@ -314,3 +314,22 @@ db.consultorios.insertMany([
     { cons_nombre: "Consultorio D", cons_id: 404 },
     { cons_nombre: "Consultorio E", cons_id: 505 },
 ]);
+
+db.createCollection("roles", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["rol_nombre"],
+            properties: {
+                rol_id: {
+                    bsonType: "int",
+                    description: "Identificador del rol",
+                },
+                rol_nombre: {
+                    bsonType: "string",
+                    description: "Nombre del rol",
+                },
+            },
+        },
+    },
+});

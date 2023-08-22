@@ -12,6 +12,22 @@ const pacientesSchema = z.object({
     tipoDoc: z.number({required_error: "El tipoDoc es requerido"}).int().min(1).max(3)
 });
 
+const tipoUsuarioSchema = z.object({
+    email: z.string({required_error: "El email es requerido"}).email(),
+});
+const tipoMedicoSchema = z.object({
+    matricula_profesional: z.number({required_error: "La matricula_profesional es requerida"}).int().min(1).max(10),
+});
+
+const funSchemaLogin = (tipo) => tipo == 1 ? tipoUsuarioSchema : tipoMedicoSchema;
+
+const rolSchema = z.object({
+    rol: z.number({required_error: "El rol es requerido"}).int().min(1).max(2),
+});
+
+
 export {
-    pacientesSchema
+    pacientesSchema,
+    funSchemaLogin,
+    rolSchema
 }
