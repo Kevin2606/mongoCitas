@@ -38,7 +38,8 @@ const validarToken = async (token) => {
             encoder.encode(process.env.JWT_SECRET)
         );
         const { id, rol } = jwtData.payload;
-        return await conexionDB.collection(rolesSwich[rol]).findOne({_id: new ObjectId(id)});
+        const usuario = await db.collection(rolesSwich[rol]).findOne({_id: new ObjectId(id)});
+        return { usuario, rol };
     } catch (error) {
         return false;
     }

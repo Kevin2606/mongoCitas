@@ -1,12 +1,31 @@
+### RUTA: LOGIN
+### Login de pacientes
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "rol": 1,
+  "email": "juan@example.com"
+}
+
 ### RUTA: PACIENTES
 ### Recuperar todos los pacientes ordenados por apellido
 GET http://localhost:3000/pacientes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
 ### Obtener los consultorio donde se aplicó las citas de un paciente
 GET http://localhost:3000/pacientes/consultorios/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
 ### Insertar un paciente a la tabla usuario pero si es menor de edad solicitar primero que ingrese el acudiente y validar si ya estaba registrado el acudiente.
-POST http://localhost:3000/pacientes 
+POST http://localhost:3000/pacientes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
 Content-Type: application/json
 
 {
   "nombre": "Juan"
 }
+
+
+### RUTA: CITAS
+### Recuperar todas las citas
+GET http://localhost:3000/citas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
