@@ -29,3 +29,9 @@ Content-Type: application/json
 ### Recuperar todas las citas
 GET http://localhost:3000/citas
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+### Recuperar todas las citas de un paciente
+GET http://localhost:3000/citas/paciente/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+### Encontrar todos los pacientes que tienen citas con un médico específico (por ejemplo, el médico con **med_nroMatriculaProsional 1**)
+GET http://localhost:3000/citas/medico/45678
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
