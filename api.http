@@ -11,27 +11,77 @@ Content-Type: application/json
 ### RUTA: PACIENTES
 ### Recuperar todos los pacientes ordenados por apellido
 GET http://localhost:3000/pacientes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
 ### Obtener los consultorio donde se aplicó las citas de un paciente
 GET http://localhost:3000/pacientes/consultorios/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
 ### Insertar un paciente a la tabla usuario pero si es menor de edad solicitar primero que ingrese el acudiente y validar si ya estaba registrado el acudiente.
 POST http://localhost:3000/pacientes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8;
 Content-Type: application/json
 
 {
-  "nombre": "Juan"
+  "direccion": "dede",
+  "email": "andreskevin@gmail.com",
+  "genero": 1,
+  "nombre": "Kevin",
+  "segundoNombre": "Andres",
+  "primerApellido": "Gallardo",
+  "segundoApellido": "Robles",
+  "telefono": "33333333",
+  "tipoDoc": 3
 }
 
 
 ### RUTA: CITAS
 ### Recuperar todas las citas
 GET http://localhost:3000/citas
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
 ### Recuperar todas las citas de un paciente
 GET http://localhost:3000/citas/paciente/5
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
 ### Encontrar todos los pacientes que tienen citas con un médico específico (por ejemplo, el médico con **med_nroMatriculaProsional 1**)
 GET http://localhost:3000/citas/medico/45678
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkyOTEyOTg0LCJleHAiOjE2OTI5MTY1ODR9.gXzvB_iTsd8rFNW1OzPJHEo9GzoQS2EOpjXc8V0Ql2k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
+### Encontrar todas las citas para un día específico (por ejemplo, **'2023-07-12'**)
+GET http://localhost:3000/citas/fecha/2023-09-05
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
+### Obtener todas las citas realizadas por los pacientes de un genero si su estado de la cita fue atendidad: Genero 1: Masculino, Genero 2: Femenino
+GET http://localhost:3000/citas/genero/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
+### Mostrar todas las citas que fueron rechazadas y en un mes específico, mostrar la fecha de la cita, el nombre del usuario y el médico.
+GET http://localhost:3000/citas/rechazadas/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
+### Prueba de autorizacion de ruta con un token Paciente en la ruta de medicos
+GET http://localhost:3000/medicos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkNiIsInJvbCI6MSwiaWF0IjoxNjkzMDI1MzM2LCJleHAiOjE2OTMwMjg5MzZ9.i4c5wj86wFEjw8SuXUTIteLev2Q2PRxm8cWC0rDcHg8
+
+### Generar token de medicos
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "rol": 2,
+  "matricula_profesional": 54321
+}
+
+### RUTA: MEDICOS
+### Obtener los médicos y sus consultorios
+GET http://localhost:3000/medicos/consultorios
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkYyIsInJvbCI6MiwiaWF0IjoxNjkzMDI2MzMwLCJleHAiOjE2OTMwMjk5MzB9.zrAF0a3o64H2s9R-e_PtF9evo-_kJpNidgq7aymeWeY
+
+### Contar el número de citas que un médico tiene en un día específico (por ejemplo, el médico con **med_nroMatriculaProsional 1 en '2023-07-12'**)
+GET http://localhost:3000/medicos/citas/12345/2023-08-25
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkYyIsInJvbCI6MiwiaWF0IjoxNjkzMDI2MzMwLCJleHAiOjE2OTMwMjk5MzB9.zrAF0a3o64H2s9R-e_PtF9evo-_kJpNidgq7aymeWeY
+
+### Obtener todos los médicos de una especialidad específica (por ejemplo, **'Cardiología'**):
+GET http://localhost:3000/medicos/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTQ0YzU1NTg4MzNmZTM2YTJiYzFkYyIsInJvbCI6MiwiaWF0IjoxNjkzMDI2MzMwLCJleHAiOjE2OTMwMjk5MzB9.zrAF0a3o64H2s9R-e_PtF9evo-_kJpNidgq7aymeWeY

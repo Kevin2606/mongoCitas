@@ -16,7 +16,7 @@ const tipoUsuarioSchema = z.object({
     email: z.string({required_error: "El email es requerido"}).email(),
 });
 const tipoMedicoSchema = z.object({
-    matricula_profesional: z.number({required_error: "La matricula_profesional es requerida"}).int().min(1).max(10),
+    matricula_profesional: z.number({required_error: "La matricula_profesional es requerida"}).int().min(1).max(999999),
 });
 
 const funSchemaLogin = (tipo) => tipo == 1 ? tipoUsuarioSchema : tipoMedicoSchema;
