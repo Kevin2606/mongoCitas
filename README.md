@@ -84,7 +84,7 @@ El token de autenticacion sera necesario para cada endpoint listado en la seccio
 
 #### Citas
 ```Bash
-GET http://localhost:3000/citas
+http://localhost:3000/citas
 ```
 
 | Método HTTP | Ruta                               | Descripción                                                            |
@@ -98,7 +98,7 @@ GET http://localhost:3000/citas
 
 #### Pacientes
 ```Bash
-GET http://localhost:3000/pacientes
+http://localhost:3000/pacientes
 ```
 
 | Método HTTP | Ruta                               | Descripción                                                            |
@@ -109,7 +109,7 @@ GET http://localhost:3000/pacientes
 
 #### Medicos
 ```Bash
-GET http://localhost:3000/medicos
+http://localhost:3000/medicos
 ```
 
 | Método HTTP | Ruta                               | Descripción                                                            |
